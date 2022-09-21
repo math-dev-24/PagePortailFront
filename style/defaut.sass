@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap')
+@import "./animations/_glitch"
+@import "./animations/_apparition"
+@import "./animations/_underline"
+
+@import "./partial/_responsive"
+@import "./partial/_variable"
+@import "./partial/_flex"
+@import "./partial/_m_p"
+
+@import "./partial/_reset"
+
+
+#app
+    width: 100vw
+    min-height: 100vh
+    background-image: url('../asset/bg.png')
+    background-size: cover
+    background-repeat: no-repeat
+    text-align: center    
+
+    .content
+        +lg_max
+            width: 96vw
+        +lg_min
+            width: 50vw
+        margin: auto
+        background: $bg_white_a
+        padding: 60px 5px
+        backdrop-filter: blur(15px)
+        border-radius: 2px
+        scroll-margin-top: 65px
+        animation: apparition .5s
+
+.item
+    margin: 5px
+    text-align: center
+    width: 250px
+    height: 150px
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    font-size: 1.2em
+    border-radius: 6px
+    &:hover
+        backdrop-filter: blur(15px)
+
+#side_social
+    margin: 20px auto
+    display: flex
+    height: 90px
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-around
+    align-items: center
+    +lg_min
+        width: 30vw
+    +lg_max
+        width: 80vw
+
+nav
+    z-index: 20
+    height: 60px
+    display: flex
+    justify-content: start
+    align-items: center
+    margin: 0px
+    position: fixed
+    top: 0px
+    left: 0px
+    width: 100vw
+    background: rgba(255,255,255,0.60)
+    a
+        margin: 10px 20px
+        cursor: pointer
+        text-transform: uppercase
+        font-weight: bold
+    .select_nav
+        color: rgb(244, 67, 54)
+
+
+h1
+    padding-top: 75px
+
+.fab
+    cursor: pointer
+.fab:hover
+    animation: icon-glitch 1s infinite
+
+.btn_submit
+    position: relative
+    background: #cb3b27
+    text-decoration: none
+    border: solid 1px #cb3b27
+    text-align: center
+    padding: 10px 20px
+    transition: all .2s
+    cursor: pointer
+    top: 0px
+    box-shadow: 0px 9px 0px #84261a
+
+    &:hover
+        top: 5px
+        box-shadow: 0px 5px 0px #84261a
+    
+    &:active
+        top: 8px
+        box-shadow: 0px 2px 0px #84261a
+
+#form_contact
+    position: absolute
+    display: flex
+    backdrop-filter: blur(15px)
+    background: $bg_white_a
+    padding: 40px 20px
+    border-radius: 5px
+    justify-content: space-around
+    align-items: center
+    flex-direction: column
+    animation: apparition .5s
+    h1
+        padding-top: 10px
+    +lg_max
+        width: 90vw
+        left: 5vw
+        top: 10vh
+    +lg_min
+        width: 50vw
+        left: 25vw
+        top: 20vh
+    .input_style
+        position: relative
+        margin: 10px 5px
+        & input, & textarea
+            display: block
+            width: 100%
+            border: 1px solid white
+            border-radius: 4px
+            height: 40px
+            color: #84261a
+            outline: none
+            box-sizing: border-box
+            border: 2px solid #84261a
+        & span
+            position: absolute
+            left: 6px
+            top: 8px
+            color: black
+            white-space: nowrap
+            transition: all .2s ease-in
+        
+        
+        input:not(:placeholder-shown), textarea:not(:placeholder-shown),input:focus, textarea:focus
+            
+            & + span
+                transform: translateX(-3px) translateY(-27px)
+                color: white
+                font-weight: bold

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./style/defaut.css">
+    <link rel="icon" href="./asset/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <a href="./index.html" class="underline">Home</a>
+            <a class="select_nav">Contact</a>
+        </nav>
+        <form class="d_flex" id="form_contact">
+            <h1 class="mb_15">Contact :</h1>
+
+            <div class="d_flex">
+                <div class="d_flex f_column m_5">
+                    <label class="input_style">
+                        <input type="email" name="email" id="email" placeholder=" ">
+                        <span>Email</span>
+                    </label>
+                </div>
+                <div class="d_flex f_column m_5">
+                    <label class="input_style">
+                        <input type="text" name="name" id="name" placeholder=" ">
+                        <span>Nom</span>
+                    </label>
+                </div>
+            </div>
+            <div class="d_flex">
+                <div class="d_flex f_column m_5">
+                    <label class="input_style">
+                        <input type="text" name="surname" id="surname" placeholder=" ">
+                        <span>Prénom</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="d_flex f_column m_5">
+                <label class="input_style">
+                    <textarea name="msg" id="msg" cols="60" rows="10" placeholder=" "></textarea>
+                    <span>Votre message</span>
+                </label>
+            </div>
+            <button class="btn_submit">Envoyer</button>
+        </form>
+
+    </div>
+
+    
+</body>
+</html>
